@@ -3,7 +3,9 @@ FROM guacamole/guacamole
 
 RUN set -xe \
     && apt-get update \
-    && apt-get install python-pip
+    && apt-get install python3-pip
+    
+RUN pip3 install --upgrade pip
     
 RUN pip install --upgrade pip
 
