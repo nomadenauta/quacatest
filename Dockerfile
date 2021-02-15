@@ -1,6 +1,12 @@
 FROM python:3.7-slim
 FROM guacamole/guacamole
 
+RUN set -xe \
+    && apt-get update \
+    && apt-get install python-pip
+    
+RUN pip install --upgrade pip
+
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook
 
