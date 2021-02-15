@@ -3,7 +3,7 @@ FROM guacamole/guacamole
 
 RUN apt-get update \
     && apt-get install -y python3-pip
-RUN pip install --no-cache-dir notebook==5.*
+RUN pip3 install --no-cache-dir notebook==5.*
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
