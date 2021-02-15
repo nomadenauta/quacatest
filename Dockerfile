@@ -1,5 +1,6 @@
 FROM python:3.7-slim
-FROM guacamole/guacamole
+FROM oznu/guacamole
+
 
 RUN apt-get update \
     && apt-get install -y python3-pip
