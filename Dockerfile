@@ -1,3 +1,4 @@
+FROM python:3.7-slim
 FROM guacamole/guacamole
 
 RUN pip install --no-cache --upgrade pip && \
