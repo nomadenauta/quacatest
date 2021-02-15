@@ -1,6 +1,7 @@
 FROM guacamole/guacamole
 
-RUN pip install --no-cache-dir notebook==5.*
+RUN pip install --no-cache --upgrade pip && \
+    pip install --no-cache notebook
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
