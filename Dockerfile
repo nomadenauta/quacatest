@@ -1,7 +1,8 @@
 FROM python:3.7-slim
 FROM guacamole/guacamole
 
-RUN apt-get -y install python3-pip
+RUN apt-get update \
+    && apt-get install python3-pip
 RUN pip install --no-cache-dir notebook==5.*
 
 ARG NB_USER=jovyan
